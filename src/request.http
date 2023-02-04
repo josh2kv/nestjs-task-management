@@ -1,0 +1,13 @@
+
+### Create a new task
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+  "title": "aaaa",
+  "description": "aaa"
+}
+
+
+### Find all tasks
+GET http://localhost:3000/tasks
