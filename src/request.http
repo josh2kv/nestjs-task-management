@@ -1,13 +1,31 @@
 
+
+
+### Find all tasks
+GET http://localhost:3000/tasks
+
+### Find a task by ID
+GET http://localhost:3000/tasks/3b0f7d48-d05b-4b2e-80dd-984e0797d98f
+
+### Find a task by keyword
+GET http://localhost:3000/tasks?search=kb
+
 ### Create a new task
 POST http://localhost:3000/tasks
 content-type: application/json
 
 {
-  "title": "aaaa",
-  "description": "aaa"
+  "title": "kkk",
+  "description": "bkkkb"
 }
 
+### Update a task
+PATCH http://localhost:3000/tasks/3b0f7d48-d05b-4b2e-80dd-984e0797d98f/status
+content-type: application/json
 
-### Find all tasks
-GET http://localhost:3000/tasks
+{
+  "status": "DONE"
+}
+
+### Delete a task by ID
+DELETE  http://localhost:3000/tasks/2fcc28ca-1014-42cf-bf8e-a209b874f359
