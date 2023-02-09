@@ -1,10 +1,19 @@
 
-### Create a user
+### Sign up
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
   "username": "yyyyy1",
+  "password": "9l`DSl^ecF>Bp"
+}
+
+### Sign in
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "username": "yyyyy11",
   "password": "9l`DSl^ecF>Bp"
 }
 
