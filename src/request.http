@@ -13,7 +13,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "username": "yyyyy11",
+  "username": "yyyyy1",
   "password": "9l`DSl^ecF>Bp"
 }
 
