@@ -21,6 +21,8 @@ content-type: application/json
 
 ### Find all tasks
 GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5eXl5MSIsImlhdCI6MTY3NjE3MzI3NiwiZXhwIjoxNjc2MTc2ODc2fQ.ruSWg_Yu_qc2tYccOrJRUogSmuHUeeydqgut7xEkMJA
+
 
 ### Find a task by ID
 GET http://localhost:3000/tasks/3b0f7d48-d05b-4b2e-80dd-984e0797d98f

@@ -13,10 +13,11 @@ export class TasksService {
     @InjectRepository(Task) private tasksRepository: Repository<Task>,
   ) {}
 
-  getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
+  getTasks(filterDto: GetTasksFilterDto, user: User): Promise<Task[]> {
     const { status, search } = filterDto;
 
     const query = this.tasksRepository.createQueryBuilder('task');
+    query.where({ user });
 
     if (status) query.andWhere('task.status = :status', { status });
 
