@@ -1,4 +1,4 @@
-
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5eXl5MSIsImlhdCI6MTY3NjE3ODU1NCwiZXhwIjoxNjc2MTgyMTU0fQ.XUO01JfttxuJXei14CJQyPAvxlOKGu8PqEDJFpgfM-4
 ### Sign up
 POST http://localhost:3000/auth/signup
 content-type: application/json
@@ -21,7 +21,7 @@ content-type: application/json
 
 ### Find all tasks
 GET http://localhost:3000/tasks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5eXl5MSIsImlhdCI6MTY3NjE3MzI3NiwiZXhwIjoxNjc2MTc2ODc2fQ.ruSWg_Yu_qc2tYccOrJRUogSmuHUeeydqgut7xEkMJA
+Authorization: Bearer {{token}}
 
 
 ### Find a task by ID
@@ -33,7 +33,7 @@ GET http://localhost:3000/tasks?search=kb
 ### Create a new task
 POST http://localhost:3000/tasks
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5eXl5MSIsImlhdCI6MTY3NjE3MzI3NiwiZXhwIjoxNjc2MTc2ODc2fQ.ruSWg_Yu_qc2tYccOrJRUogSmuHUeeydqgut7xEkMJA
+Authorization: Bearer {{token}}
 
 {
   "title": "kkk",
@@ -43,6 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5e
 ### Update a task
 PATCH http://localhost:3000/tasks/3b0f7d48-d05b-4b2e-80dd-984e0797d98f/status
 content-type: application/json
+Authorization: Bearer {{token}}
 
 {
   "status": "DONE"
