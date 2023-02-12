@@ -1,10 +1,13 @@
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inl5eXl5MSIsImlhdCI6MTY3NjE3ODU1NCwiZXhwIjoxNjc2MTgyMTU0fQ.XUO01JfttxuJXei14CJQyPAvxlOKGu8PqEDJFpgfM-4
+@id=yyyyy1
+@pw=9l`DSl^ecF>Bp
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyZWUiLCJpYXQiOjE2NzYxODI3MTcsImV4cCI6MTY3NjE4NjMxN30.YLyx3pVva2-GDeRzafxBOcWkh9J7FT-DKFUPdsj9Si4
+
 ### Sign up
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "username": "yyyyy1",
+  "username": "eeee",
   "password": "9l`DSl^ecF>Bp"
 }
 
@@ -13,7 +16,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "username": "yyyyy1",
+  "username": "eree",
   "password": "9l`DSl^ecF>Bp"
 }
 
