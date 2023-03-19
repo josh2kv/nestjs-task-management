@@ -14,18 +14,16 @@ export class UsersService {
     @InjectRepository(User) private usersRepository: Repository<User>,
   ) {}
 
-  createUser(username: string, password: string): Promise<User> {
+  async createUser(username: string, password: string): Promise<User> {
+    if (await this.isUsernameExists(username))
+      throw new ConflictException('Username already exists');
+
     const user = this.usersRepository.create({ username, password });
 
     try {
       return this.usersRepository.save(user);
     } catch (error) {
-      if (error.code === '23505') {
-        // duplicate username
-        throw new ConflictException('Username already exists');
-      } else {
-        throw new InternalServerErrorException();
-      }
+      throw new InternalServerErrorException();
     }
   }
 
@@ -35,5 +33,11 @@ export class UsersService {
     if (!user) throw new NotFoundException('Username not found');
 
     return user;
+  }
+
+  async isUsernameExists(username: string): Promise<boolean> {
+    return (await this.usersRepository.findOne({ where: { username } }))
+      ? true
+      : false;
   }
 }
