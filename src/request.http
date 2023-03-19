@@ -1,6 +1,6 @@
 @id=yyyyy1
 @pw=9l`DSl^ecF>Bp
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyZWUiLCJpYXQiOjE2NzYxODI3MTcsImV4cCI6MTY3NjE4NjMxN30.YLyx3pVva2-GDeRzafxBOcWkh9J7FT-DKFUPdsj9Si4
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVlZWUiLCJpYXQiOjE2NzkyNDEzMzAsImV4cCI6MTY3OTI0NDkzMH0.x3CDBKgto_wfcMZCS53lM_8fiWfm7SfnW46zcH58RVc
 
 ### Sign up
 POST http://localhost:3000/auth/signup
@@ -16,7 +16,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "username": "eree",
+  "username": "eeee",
   "password": "9l`DSl^ecF>Bp"
 }
 
